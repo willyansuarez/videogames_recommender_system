@@ -1,11 +1,11 @@
 # importar librerias
 from fastapi import FastAPI
 import pandas as pd
-# import fastparquet
+import fastparquet
 
 
 
-df_func_1 = pd.read_parquet("df_func_1.parquet")
+df_func_1 = pd.read_parquet("./datasets/df_func_1.parquet")
 # df_func_6 = pd.read_parquet("./datasets/df_func_6.parquet")
 # df_funcs_3_4 = pd.read_parquet("./datasets/df_funcs_3_4.parquet")
 # df_steam_games_2 = pd.read_parquet("./datasets/df_steam_games_2.parquet")
