@@ -9,7 +9,7 @@ import pandas as pd
 # df_func_6 = pd.read_parquet("./datasets/df_func_6.parquet")
 # df_funcs_3_4 = pd.read_parquet("./datasets/df_funcs_3_4.parquet")
 # df_steam_games_2 = pd.read_parquet("./datasets/df_steam_games_2.parquet")
-# df_users_reviews_2 = pd.read_parquet("./datasets/df_users_reviews_2.parquet")
+df_users_reviews_2 = pd.read_parquet("./datasets/df_users_reviews_2.parquet")
 # df_games = pd.read_parquet("./datasets/df_games.parquet")
 
 
@@ -18,9 +18,9 @@ import pandas as pd
 app = FastAPI()
 
 
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+# @app.get("/")
+# def read_root():
+#     return {"Hello": "World"}
 
 
 # Función 1
@@ -45,26 +45,26 @@ def read_root():
 
 
 # Función 2
-# @app.get('/countreviews/{start_date, end_date}')
-# def countreviews(start_date: str, end_date: str):
-#     # Filtrar las reviews por las fechas dadas
-#     reviews_filtradas = df_users_reviews_2[(df_users_reviews_2['date_posted'] >= start_date) & (df_users_reviews_2['date_posted'] <= end_date)]
+@app.get('/countreviews/{start_date, end_date}')
+def countreviews(start_date: str, end_date: str):
+    # Filtrar las reviews por las fechas dadas
+    reviews_filtradas = df_users_reviews_2[(df_users_reviews_2['date_posted'] >= start_date) & (df_users_reviews_2['date_posted'] <= end_date)]
 
-#     # Contar la cantidad de usuarios que realizaron reviews
-#     cantidad_usuarios = reviews_filtradas['user_id'].nunique()
+    # Contar la cantidad de usuarios que realizaron reviews
+    cantidad_usuarios = reviews_filtradas['user_id'].nunique()
 
-#     # Calcular el porcentaje de recomendación
-#     porcentaje_recomendacion = reviews_filtradas['recommend'].mean() * 100
+    # Calcular el porcentaje de recomendación
+    porcentaje_recomendacion = reviews_filtradas['recommend'].mean() * 100
 
-#     # Devolver la cantidad de usuarios y el porcentaje de recomendación
+    # Devolver la cantidad de usuarios y el porcentaje de recomendación
 
-#     info = {
-#         "cantidad de usuarios": cantidad_usuarios,
-#         "porcentaje de recomendación": f"{porcentaje_recomendacion:.2f}%"
-#     }
+    info = {
+        "cantidad de usuarios": cantidad_usuarios,
+        "porcentaje de recomendación": f"{porcentaje_recomendacion:.2f}%"
+    }
 
-#     # return cantidad_usuarios, porcentaje_recomendacion
-#     return info
+    # return cantidad_usuarios, porcentaje_recomendacion
+    return info
 
 
 # # Función 3
