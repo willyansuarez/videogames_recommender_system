@@ -10,5 +10,3 @@ app = FastAPI()
 def root():
     data = {"word": "Hello Wolrd"}
     return data
-
-
