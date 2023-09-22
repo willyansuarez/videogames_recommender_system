@@ -3,7 +3,7 @@ import uvicorn
 import pandas as pd
 
 
-df = pd.read_parquet('df_func_1.parquet')
+df = pd.read_parquet('datasets/df_func_1.parquet')
 app = FastAPI()
 
 @app.get("/")
