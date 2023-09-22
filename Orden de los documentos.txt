@@ -1,0 +1,8 @@
+Orden de ejecución de los notebooks.
+
+1- load_transform_data.ipynb                 * Carga de los archivos originales
+2- etl_eda_steam_games.ipynb              * Tratamiento del archivo steam_games
+3- etl_eda_user_reviews.ipynb                * Tratamineto del archivo user_reviews
+4- analisis_sentimiento.ipynb                 * Análisis de sentimiento a user_reviews.review
+5-etl_eda_users_items.ipynb                  * Tratamiento del archivo users_items
+6-
