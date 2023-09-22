@@ -5,7 +5,7 @@ import pandas as pd
 
 
 
-df_func_1 = pd.read_parquet("datasets/df_func_1.parquet")
+df_func_1 = pd.read_parquet("./datasets/df_func_1.parquet")
 # df_func_6 = pd.read_parquet("./datasets/df_func_6.parquet")
 # df_funcs_3_4 = pd.read_parquet("./datasets/df_funcs_3_4.parquet")
 # df_steam_games_2 = pd.read_parquet("./datasets/df_steam_games_2.parquet")
