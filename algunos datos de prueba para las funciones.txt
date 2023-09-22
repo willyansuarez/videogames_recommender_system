@@ -1,6 +1,8 @@
 
 algunos user_id para la funcion 1
 
+
+6561197970982479
 Barridos   
 DJSean   
 grim1928   
@@ -11,11 +13,9 @@ NeonSabre
 76561198140788321   
 RickHasThreeDicks   
 Uve-Seen_Nothing 
-76561197970982479
 zigzagsoft
 laislabonita75
 evilindiegaming
-laislabonita75
 Gamer0009
 76561198094471302
 76561198095169213
@@ -25,8 +25,15 @@ kalagan123
 zigzagsoft
 laislabonita75
 evilindiegaming
-laislabonita75
 Gamer0009
+death-hunter
+DJKamBer
+diego9031
+76561198081962345
+
+
+
+
 
 ================================================================
 
@@ -163,7 +170,7 @@ algunos años para la función 6
 
 =============================================================
 
-algunos juegos para la función de recoendación
+algunos juegos para la función de recomendación
 
 Half-Life: Opposing Force
 Ricochet
