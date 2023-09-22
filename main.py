@@ -36,10 +36,3 @@ def userdata(user_id:str):
     return res
 
 
-
-@app.get("/recommend_game/")
-def recommend_game(game:str):
-    df7 = pd.read_parquet('datasets/df_games.parquet')
-    res = df7[df7["game"] == game]
-    games = res.recommended.item()
-    return {games}
