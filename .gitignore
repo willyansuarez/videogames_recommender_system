@@ -1,10 +1,8 @@
 venv/
-analisis_sentimiento.ipynb
-endpoints.ipynb
-etl_eda_steam_games.ipynb
-etl_eda_user_reviews.ipynb
-etl_eda_users_items.ipynb
-load_transform_data.ipynb
-load_transform_data.ipynb
-recommended_model.ipynb
-Untitled2.ipynb
+Untitled.ipynb
+
+
+
+
+
+
