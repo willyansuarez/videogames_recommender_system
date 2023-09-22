@@ -6,7 +6,7 @@ import pandas as pd
 # df = pd.read_csv("/home/willian/modelo_recomendacion_peliculas/movies_recommendation/datasets/movies_processed.csv")
 # df_2 = pd.read_parquet("/home/willian/modelo_recomendacion_peliculas/movies_recommendation/datasets/movies_with_recommendations.parquet")
 
-df_func_1 = pd.read_parquet("../datasets/df_func_1.parquet")
+df_func_1 = pd.read_parquet("datasets/df_func_1.parquet")
 # df_2 = pd.read_parquet("./datasets/movies_with_recommendations.parquet")
 
 app = FastAPI()
