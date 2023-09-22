@@ -4,8 +4,7 @@ import pandas as pd
 # import fastparquet
 
 
-# df = pd.read_csv("./datasets/movies_processed.csv")
-# df_2 = pd.read_parquet("./datasets/movies_with_recommendations.parquet")
+
 df_func_1 = pd.read_parquet("./datasets/df_func_1.parquet")
 df_func_6 = pd.read_parquet("./datasets/df_func_6.parquet")
 df_funcs_3_4 = pd.read_parquet("./datasets/df_funcs_3_4.parquet")
