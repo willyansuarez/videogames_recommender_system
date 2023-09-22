@@ -5,7 +5,7 @@ import pandas as pd
 
 
 
-df_func_1 = pd.read_parquet("./datasets/df_func_1.parquet")
+# df_func_1 = pd.read_parquet("./datasets/df_func_1.parquet")
 # df_func_6 = pd.read_parquet("./datasets/df_func_6.parquet")
 # df_funcs_3_4 = pd.read_parquet("./datasets/df_funcs_3_4.parquet")
 # df_steam_games_2 = pd.read_parquet("./datasets/df_steam_games_2.parquet")
@@ -18,30 +18,30 @@ df_func_1 = pd.read_parquet("./datasets/df_func_1.parquet")
 app = FastAPI()
 
 
-# @app.get("/")
-# def read_root():
-#     return {"Hello": "World"}
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
 
 
 # Función 1
-@app.get('/userdata/{user_id}')
-def userdata(user_id : str):
-    # 
-    user = df_func_1[df_func_1['user_id'] == user_id]
-    #
-    cantidad_items = user.item_id.count()
-    # 
-    dinero_gastado = user.price.sum()
-    # 
-    porcentaje_recomendacion = user.recommend.mean() * 100
-    #
-    res = {
-        "cantidad items": cantidad_items.item(),
-        "dinero gastado": f"{dinero_gastado:.2f}$",
-        "porcentaje de recomendación": f"{porcentaje_recomendacion:.2f}%",
-    }
+# @app.get('/userdata/{user_id}')
+# def userdata(user_id : str):
+#     # 
+#     user = df_func_1[df_func_1['user_id'] == user_id]
+#     #
+#     cantidad_items = user.item_id.count()
+#     # 
+#     dinero_gastado = user.price.sum()
+#     # 
+#     porcentaje_recomendacion = user.recommend.mean() * 100
+#     #
+#     res = {
+#         "cantidad items": cantidad_items.item(),
+#         "dinero gastado": f"{dinero_gastado:.2f}$",
+#         "porcentaje de recomendación": f"{porcentaje_recomendacion:.2f}%",
+#     }
 
-    return res
+#     return res
 
 
 # Función 2
