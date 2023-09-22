@@ -155,8 +155,11 @@ async def sentiment_analysis(year: int):
 #-----------------------------------------------------------------------------------------------------------------
 
 @app.get('/recomendacion_juego/{id}')
-def recomendacion_juego(id: str):
-    
+def recomendacion_juego(game: str):
     df7 = pd.read_parquet('df_games.parquet')
-    c = df7[df7["game"] == g]["recommended"]
-    return c
+    res = df7[df7["game"] == game]
+    
+    games = res.recommended.item()
+    return {games}
+    
+    
