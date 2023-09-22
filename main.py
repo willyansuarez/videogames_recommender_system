@@ -6,7 +6,7 @@ import pandas as pd
 df = pd.read_parquet('datasets/df_func_1.parquet')
 df2 = pd.read_parquet('datasets/df_users_reviews_2.parquet')
 df3 = pd.read_parquet('datasets/df_funcs_3_4.parquet')
-df4 = pd.read_parquet('datasets/df_funcs_3_4.parquet')
+
 df5 = pd.read_parquet('datasets/df_steam_games_2.parquet')
 df6 = pd.read_parquet('datasets/df_func_6.parquet')
 df7 = pd.read_parquet('datasets/df_games.parquet')
@@ -86,7 +86,7 @@ def genero(genero: str):
 @app.get('/userforgenre/{genero}')
 def userforgenre(genero: str):
     # Filtrar el dataframe por el género especificado
-    df_filtered = df4[df4['genres'].str.contains(genero, case=False, regex=False)]
+    df_filtered = df3[df3['genres'].str.contains(genero, case=False, regex=False)]
 
     # Agrupar por usuario y calcular las horas totales de juego
     df_grouped = df_filtered.groupby(['user_id', 'user_url']).agg({'playtime_forever': 'sum'}).reset_index()
