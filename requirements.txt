@@ -1,11 +1,8 @@
 fastapi
-fasteners
 fastjsonschema
 fastparquet
-nltk
 numpy
 pandas
 pydantic
 python-dateutil
-scikit-learn
 uvicorn
