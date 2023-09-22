@@ -6,7 +6,6 @@ import pandas as pd
 df = pd.read_parquet('datasets/df_func_1.parquet')
 df2 = pd.read_parquet('datasets/df_users_reviews_2.parquet')
 
-
 app = FastAPI()
 
 # @app.get("/")
@@ -33,9 +32,10 @@ def userdata(user_id:str):
 
     return res
 
-# Función 2
-@app.get('/countreviews/{start_date, end_date}')
-def countreviews(start_date: str, end_date: str):
+
+
+@app.get("/countreviews/")
+def countreviews(start_date:str, end_date:str):
     # Filtrar las reviews por las fechas dadas
     reviews_filtradas = df2[(df2['date_posted'] >= start_date) & (df2['date_posted'] <= end_date)]
 
@@ -55,4 +55,4 @@ def countreviews(start_date: str, end_date: str):
     # return cantidad_usuarios, porcentaje_recomendacion
     return info
 
-
+    
