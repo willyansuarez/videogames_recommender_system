@@ -7,7 +7,7 @@ df = pd.read_parquet('datasets/df_func_1.parquet')
 
 
 
-df7 = pd.read_parquet('datasets/df_games.parquet')
+
 
 app = FastAPI()
 
@@ -39,6 +39,7 @@ def userdata(user_id:str):
 
 @app.get("/recommend_game/")
 def recommend_game(game:str):
+    df7 = pd.read_parquet('datasets/df_games.parquet')
     res = df7[df7["game"] == game]
     games = res.recommended.item()
     return {games}
