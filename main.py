@@ -12,9 +12,9 @@ df = pd.read_parquet('datasets/df_func_1.parquet')
 app = FastAPI()
 
 @app.get("/")
-# def root():
+def root():
 #     data = {"word": "Hello Wolrd"}
-#     return data
+    return data
 
 
 @app.get("/userdata/")
